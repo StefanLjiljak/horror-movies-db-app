@@ -13,7 +13,7 @@ function Card({ movie }) {
       <div className="body">
         <h3>{truncate(movie.original_title, 24)}</h3>
         <p dangerouslySetInnerHTML={{ __html: truncate(movie.overview, 60) }} />
-        <Link href="/movies/id/[id]" as={`/movies/id/${movie.id}`}>
+        <Link href="/movies/[movie]/[id]" as={`/movies/[movie]/${movie.id}`}>
           <a>More about this movie</a>
         </Link>
       </div>
