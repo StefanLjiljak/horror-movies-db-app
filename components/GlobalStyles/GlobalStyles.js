@@ -14,8 +14,6 @@ const GlobalStyles = () => {
             width: 100%;
             overflow: auto;
             overflow-x: hidden;
-            height: 100vh;
-            position: relative;
           }
 
           body {
@@ -23,6 +21,8 @@ const GlobalStyles = () => {
             margin: 0;
             height: 99%;
             position: relative;
+            padding-bottom: 18px;
+            min-height: 100vh;
           }
 
           article,
@@ -397,29 +397,28 @@ const GlobalStyles = () => {
           scrollbar-width: 2px;
 
           .content {
-            position: relative;
             height: 100%;
+            padding-bottom: 3rem;
           }
 
           #footer {
-            position: relative;
-            bottom: 0.5rem;
+            position: absolute;
+            bottom: 0;
             width: 100%;
-            height: 100%;
             text-align: center;
             justify-content: center;
             align-items: center;
-            margin-top: 1.5rem;
+            padding: 18px;
           }
 
-          #pages {
+          .pages {
             align-items: center;
             justify-content: center;
             text-align: center;
           }
 
           @media (max-width: 768px) {
-            #pages {
+            .pages {
               display: none;
             }
           }

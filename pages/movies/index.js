@@ -7,7 +7,7 @@ const MoviesPage = ({ movies, page, total_pages }) => {
   const router = useRouter();
 
   return (
-    <Box variant="container" pt={27} textAlign="center">
+    <Box variant="container" pt={27} textAlign="center" className="content">
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>
@@ -22,7 +22,7 @@ const MoviesPage = ({ movies, page, total_pages }) => {
         >
           Previous
         </button>
-        <p>{` <<<  Page: ${page} of ${total_pages}>>>`}</p>
+        <p className="pages">{` <  Page: ${page} of ${total_pages}>`}</p>
         <button
           onClick={() => router.push(`/movies?page=${page + 1}`)}
           disabled={page === total_pages}

@@ -57,7 +57,7 @@ export default function Home({ movies, page, total_pages }) {
         >
           Previous
         </button>
-        <p id="pages">{`Page: ${page} of ${total_pages}`}</p>
+        <p className="pages">{`Page: ${page} of ${total_pages}`}</p>
         <button
           onClick={() => router.push(`/?page=${page + 1}`)}
           disabled={page === total_pages}
